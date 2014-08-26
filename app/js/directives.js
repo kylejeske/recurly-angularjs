@@ -55,9 +55,4 @@ angular.module('myApp.directives', [])
 			// Could place this in an HTML template instead (wanted it to be self-contained)
 			template: '<div><div ng-show="error">{{ error }}</div><div ng-show="token">Success, token generated for Account Access: {{ token }}</div><form><input type="text" data-ng-model="data.number" placeholder="Number"><input type="text" data-ng-model="data.month" placeholder="Month (MM)"><input type="text" data-ng-model="data.year" placeholder="Year (YYYY)"><input type="text" data-ng-model="data.cvv" placeholder="CVV"><input type="text" data-ng-model="data.first_name" placeholder="First"><input type="text" data-ng-model="data.last_name" placeholder="Last"><input type="text" data-ng-model="data.postal_code" placeholder="Postal Code"><button ng-click="init()">submit</button></form></div>'
 		}
-	})
-	.directive('appVersion', ['version', function(version) {
-		return function(scope, elm, attrs) {
-			elm.text(version);
-		};
-	}]);
+	});

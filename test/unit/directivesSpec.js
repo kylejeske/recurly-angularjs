@@ -3,17 +3,26 @@
 /* jasmine specs for directives go here */
 
 describe('directives', function() {
+
+  var scope, compile, validDirective;
+
   beforeEach(module('myApp.directives'));
 
-  describe('app-version', function() {
-    it('should print current version', function() {
-      module(function($provide) {
-        $provide.value('version', 'TEST_VER');
-      });
-      inject(function($compile, $rootScope) {
-        var element = $compile('<span app-version></span>')($rootScope);
-        expect(element.text()).toEqual('TEST_VER');
-      });
-    });
+  beforeEach(function(){
+	  inject(function ($compile, $rootScope){
+		  scope = $rootScope.$new();
+		  compile = $compile;
+	  });
   });
+
+  validDirective = "<recurly-api api-url='https://zekona.recurly.com' api-key='sc-9BZinWWVk25whPG9ZGhs5l'></recurly-api>";
+
+  describe('recurly-api', function() {
+	  it('should have an empty error object', function() {
+  		var element = compile(validDirective)(scope);
+  		var $scope = element.isolateScope();
+  		expect($scope.error).toEqual(false);
+	  });
+  });
+
 });
