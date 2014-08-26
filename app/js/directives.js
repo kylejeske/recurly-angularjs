@@ -42,7 +42,6 @@ angular.module('myApp.directives', [])
 								scope.error = err.message;								
 							});
 						} else {
-							console.log(token);
 							scope.$apply(function(){
 								scope.token = token;
 							})
