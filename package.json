@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "recurly-angularjs",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "AngularJS Directive for Recurly API",
+  "repository": "https://github.com/kylejeske/recurly-angularjs",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
